@@ -5,6 +5,7 @@
 #' logical (TRUE/FALSE indicator).
 #'
 #' @return the subsetted distance object
+#' @export
 subset_distance <- function(dist, ind) {
   if(class(dist) != "dist")
     stop("dist must be a distance class!")

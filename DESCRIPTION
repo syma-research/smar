@@ -10,3 +10,7 @@ Encoding: UTF-8
 LazyData: true
 Imports:
     tidyverse
+Suggests:
+    phyloseq,
+    MMUPHin
+RoxygenNote: 6.1.1
