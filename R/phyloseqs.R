@@ -66,7 +66,7 @@ phyloseq_to_tb <- function(physeq) {
   }
 
   # If metadata is present, add
-  if(!is.null(phyloseq::access(physeq, "sample_data", errorIfNULL = FALSE))) {
+  if(!is.null(phyloseq::access(physeq, "sam_data", errorIfNULL = FALSE))) {
     df_metadata <- sample_data2(physeq)
     if(any(colnames(tb) %in% colnames(df_metadata)))
       stop("There are overlapping column names, cannot proceed!")
