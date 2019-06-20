@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-sourceDir <- function(path, pattern = "[.][Rr]$", trace = TRUE, recursive = TRUE,
+sourceDir <- function(path, pattern = "[.][Rr]$", trace = TRUE, recursive = FALSE,
                       ...) {
   for (nm in list.files(path, pattern = pattern, recursive = recursive, ...)) {
     source(file.path(path, nm), ...)
