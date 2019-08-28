@@ -9,6 +9,7 @@
 #' @param strip.text.size font size for grid panels
 #'
 #' @return does not return anything
+#' @importFrom ggplot2 theme theme_set theme_bw element_text element_blank
 #' @export
 set_ggplot <- function(title.size = 16,
                        axis.title.size = 15,
@@ -16,7 +17,7 @@ set_ggplot <- function(title.size = 16,
                        legend.text.size = 14,
                        strip.text.size = 14){
   theme_set(theme_bw() +
-              theme(panel.grid.major = element_blank(),
+                      theme(panel.grid.major = element_blank(),
                     panel.grid.minor = element_blank(),
                     title = element_text(size = title.size),
                     axis.title = element_text(size = axis.title.size),
@@ -55,7 +56,7 @@ gg_color_hue <- function(values = NULL, n = NULL) {
 #'
 #' @return plot with x axis rotated as specified
 #' @export
-#' @importFrom ggplot2 theme
+#' @importFrom ggplot2 theme element_text
 rotate_xaxis <- function(angle, hjust = 1, vjust = 1) {
   theme(axis.text.x = element_text(angle = angle, hjust = hjust, vjust = vjust))
 }

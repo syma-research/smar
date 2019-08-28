@@ -4,7 +4,8 @@
 \alias{sourceDir}
 \title{Source all R scripts under a directory}
 \usage{
-sourceDir(path, pattern = "[.][Rr]$", trace = TRUE, ...)
+sourceDir(path, pattern = "[.][Rr]$", trace = TRUE,
+  recursive = FALSE, ...)
 }
 \arguments{
 \item{trace}{should list of files be outputted?}
